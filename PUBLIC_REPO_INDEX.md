@@ -1,81 +1,82 @@
 # Public Repo Index
 
-This index routes first-contact visitors toward the clean TS research path while keeping historical prototypes visible as context. Status labels are intentionally conservative.
+This index controls the first-contact route for the public GitHub surface. It does not delete or rewrite historical work. It labels what should be read first, what is active infrastructure, what is experimental, and what should be archived or de-emphasized.
 
-## Start Here / Maps
+## Flagship / First-Contact
 
-| Repo | Purpose | Status | First-contact priority |
-| --- | --- | --- | --- |
-| [TS-Start-Here](https://github.com/BoggersTheFish/TS-Start-Here) | Public map for the BoggersTheFish TS research ecosystem: what exists, what is toy-scope, and what comes next. | flagship | high |
-| [boggersthefish-site](https://github.com/BoggersTheFish/boggersthefish-site) | Public website and project archive for BoggersTheFish research. | active | medium |
-| [BoggersTheFish](https://github.com/BoggersTheFish/BoggersTheFish) | GitHub profile README, public repo index, and cleanup checklist. | active | high |
+| Repo | Status | Role | Priority | Recommended action |
+| --- | --- | --- | --- | --- |
+| [TS-Start-Here](https://github.com/BoggersTheFish/TS-Start-Here) | flagship | Ecosystem map, repo taxonomy, first-contact explanation, and honest status. | high | Pin first; keep as canonical entry point. |
+| [TS-Reasoner-v0](https://github.com/BoggersTheFish/TS-Reasoner-v0) | flagship | Inspectable reasoning traces, verifier-backed repair loop, release receipts, and external benchmark harness. | high | Pin second; keep receipts and limitations prominent. |
+| [TS-Codex-OS](https://github.com/BoggersTheFish/TS-Codex-OS) | flagship | Project graph, tension ledger, planner, verifier, and release receipt substrate for Codex-driven development. | high | Pin third; describe as local-first project control. |
+| [TS-Core](https://github.com/BoggersTheFish/TS-Core) | flagship | Graph/tension runtime kernel for propagation, relaxation, stability, and constraint pressure experiments. | high | Pin fourth; keep kernel framing sober. |
+| [bozo](https://github.com/BoggersTheFish/bozo) | flagship | TensionLM experiments: sigmoid pairwise tension attention instead of softmax attention. | high | Pin fifth; consider rename or mirror as `TensionLM`. |
+| [BoggersTheCIG](https://github.com/BoggersTheFish/BoggersTheCIG) | flagship | Provenance-aware concept/evidence graph for claims, confidence, contradictions, and Obsidian-readable memory. | high | Pin sixth after README cleanup; foreground limitations. |
 
-## Reasoning Systems
+## Active Core Infrastructure
 
-| Repo | Purpose | Status | First-contact priority |
-| --- | --- | --- | --- |
-| [TS-Reasoner-v0](https://github.com/BoggersTheFish/TS-Reasoner-v0) | Inspectable toy reasoning system with constraint graphs, tension telemetry, verifier-backed traces, and release receipts. | flagship | high |
-| [TS-WaveLab](https://github.com/BoggersTheFish/TS-WaveLab) | Interactive lab for visualizing TS tension graphs and wave propagation. | experimental | medium |
-| [TS-MultiAgent](https://github.com/BoggersTheFish/TS-MultiAgent) | Early multi-agent tension coordination prototype. | experimental | low |
-| [ts-wave-lab](https://github.com/BoggersTheFish/ts-wave-lab) | Alternate or earlier TS wave playground. | experimental | low |
-| [ts-wave-colony](https://github.com/BoggersTheFish/ts-wave-colony) | Experimental multi-agent/wave colony variant. | experimental | low |
-| [ts-visualizer](https://github.com/BoggersTheFish/ts-visualizer) | Visualization layer for TS graphs and tension fields. | experimental | low |
+| Repo | Status | Role | Priority | Recommended action |
+| --- | --- | --- | --- | --- |
+| [cig-ts-engine](https://github.com/BoggersTheFish/cig-ts-engine) | active | CIG/TS engine branch for claim, evidence, confidence, contradiction, and revision experiments. | medium | Audit as possible cleaner CIG route. |
+| [boggersthefish-site](https://github.com/BoggersTheFish/boggersthefish-site) | active | Public website and project archive. | medium | Align project ordering with this flagship route. |
+| [BoggersTheAI](https://github.com/BoggersTheFish/BoggersTheAI) | active | Experimental local TS runtime combining graph memory, tools, dashboard, and optional LLM synthesis. | medium | Reframe README soberly before pinning. |
 
-## Project Control / Codex Tooling
+## Active Experiments
 
-| Repo | Purpose | Status | First-contact priority |
-| --- | --- | --- | --- |
-| [TS-Codex-OS](https://github.com/BoggersTheFish/TS-Codex-OS) | Local-first project graph, tension ledger, planner, and release receipt substrate for Codex-driven development. | flagship | high |
-| [BoggersTheAI](https://github.com/BoggersTheFish/BoggersTheAI) | Experimental local TS runtime combining graph memory, tools, dashboard, and optional LLM synthesis. | active | medium |
-| [BoggersTheAI-Dev](https://github.com/BoggersTheFish/BoggersTheAI-Dev) | Older development branch for local TS runtime work. | historical | low |
-| [ts-os-unified-convergence](https://github.com/BoggersTheFish/ts-os-unified-convergence) | Earlier TS-OS consolidation branch. | historical | low |
+| Repo | Status | Role | Priority | Recommended action |
+| --- | --- | --- | --- | --- |
+| [TinyLLM](https://github.com/BoggersTheFish/TinyLLM) | experimental | Minimal word-level attractor language-model experiment. | medium | Keep as educational small model artifact. |
+| [BoggersTheLLM](https://github.com/BoggersTheFish/BoggersTheLLM) | experimental | Older broader language-model experiment. | low | Mark as historical bridge to TensionLM. |
+| [ts-llm](https://github.com/BoggersTheFish/ts-llm) | experimental | Earlier TS language-model prototype. | low | Add historical routing note. |
+| [BoggersTheCIG_v2](https://github.com/BoggersTheFish/BoggersTheCIG_v2) | experimental | Alternate CIG branch. | low | Mark canonical/superseded relationship clearly. |
+| [CIG-APP-V1](https://github.com/BoggersTheFish/CIG-APP-V1) | experimental | Early contextual information graph application prototype. | low | Mark historical first CIG app. |
+| [boggers-the-dream](https://github.com/BoggersTheFish/boggers-the-dream) | experimental | Offline graph consolidation experiment. | low | Reframe as graph consolidation; avoid poetic first-contact framing. |
 
-## Graph / CIG / Knowledge Systems
+## Visual Demos
 
-| Repo | Purpose | Status | First-contact priority |
-| --- | --- | --- | --- |
-| [TS-Core](https://github.com/BoggersTheFish/TS-Core) | Lightweight graph dynamics kernel for TS-style propagation, relaxation, stability, and tension experiments. | flagship | high |
-| [BoggersTheCIG](https://github.com/BoggersTheFish/BoggersTheCIG) | Provenance-aware claim/evidence graph for contradiction tracking, confidence updates, and inspectable knowledge state. | active | high |
-| [cig-ts-engine](https://github.com/BoggersTheFish/cig-ts-engine) | CIG/TS engine branch for claim, evidence, confidence, contradiction, and revision experiments. | active | high |
-| [BoggersTheCIG_v2](https://github.com/BoggersTheFish/BoggersTheCIG_v2) | Alternate or older CIG branch. | experimental | low |
-| [CIG-APP-V1](https://github.com/BoggersTheFish/CIG-APP-V1) | Early contextual information graph application prototype. | historical | low |
+| Repo | Status | Role | Priority | Recommended action |
+| --- | --- | --- | --- | --- |
+| [TS-WaveLab](https://github.com/BoggersTheFish/TS-WaveLab) | experimental | Interactive TS tension graph and wave propagation lab. | medium | Add screenshots and "what this proves / does not prove." |
+| [TS-MultiAgent](https://github.com/BoggersTheFish/TS-MultiAgent) | experimental | Early multi-agent tension coordination prototype. | low | Fix quickstart and add measurable demo output. |
+| [ts-visualizer](https://github.com/BoggersTheFish/ts-visualizer) | experimental | Visualization layer for TS graphs and tension fields. | low | Consolidate with wave lab docs if overlapping. |
+| [ts-wave-lab](https://github.com/BoggersTheFish/ts-wave-lab) | experimental | Alternate TS wave playground. | low | Mark duplicate/superseded unless distinct. |
+| [ts-wave-colony](https://github.com/BoggersTheFish/ts-wave-colony) | experimental | Multi-agent/wave colony variant. | low | Mark experimental and avoid first-contact claims. |
 
-## Language Model Experiments
+## Historical Prototypes
 
-| Repo | Purpose | Status | First-contact priority |
-| --- | --- | --- | --- |
-| [bozo](https://github.com/BoggersTheFish/bozo) | TensionLM experiments: sigmoid pairwise tension attention as an inspectable alternative to softmax attention. | flagship | high |
-| [TinyLLM](https://github.com/BoggersTheFish/TinyLLM) | Minimal word-level attractor language model with relax dynamics and evaluation diagnostics. | experimental | medium |
-| [BoggersTheLLM](https://github.com/BoggersTheFish/BoggersTheLLM) | Earlier broader language-model experiment; useful historical bridge to TensionLM. | historical | low |
-| [ts-llm](https://github.com/BoggersTheFish/ts-llm) | Earlier TS language-model prototype. | historical | low |
-| [woke-baby-llm](https://github.com/BoggersTheFish/woke-baby-llm) | Historical toy LLM experiment; not part of the current first-contact TS stack. | historical | low |
+| Repo | Status | Role | Priority | Recommended action |
+| --- | --- | --- | --- | --- |
+| [GOAT-TS](https://github.com/BoggersTheFish/GOAT-TS) | historical | Historical TS prototype line. | low | Unpin; add historical route note. |
+| [BoggersTheMind](https://github.com/BoggersTheFish/BoggersTheMind) | historical | Earlier mind/runtime prototype. | low | Unpin; add historical route note. |
+| [BoggersTheSystem](https://github.com/BoggersTheFish/BoggersTheSystem) | historical | Earlier system/runtime prototype. | low | Add historical route note. |
+| [BoggersThePulse](https://github.com/BoggersTheFish/BoggersThePulse) | historical | Earlier pulse/daemon/runtime prototype. | low | Add historical route note. |
+| [BoggersBrain](https://github.com/BoggersTheFish/BoggersBrain) | historical | Earlier personal graph/runtime prototype. | low | Add historical route note. |
+| [3b_solution](https://github.com/BoggersTheFish/3b_solution) | historical | Historical physics/tension simulator branch. | low | Add description or archive. |
+| [woke-baby-llm](https://github.com/BoggersTheFish/woke-baby-llm) | historical | Historical toy LLM experiment. | low | Unpin; add historical route note. |
+| [GOAT-TS-DEVELOPMENT](https://github.com/BoggersTheFish/GOAT-TS-DEVELOPMENT) | historical | Development branch for the GOAT-TS line. | low | Archive or mark superseded. |
+| [GOAT-TS-LITE](https://github.com/BoggersTheFish/GOAT-TS-LITE) | historical | Lightweight GOAT-TS branch. | low | Archive or mark superseded. |
+| [GOAT-TS-SUPERLITE](https://github.com/BoggersTheFish/GOAT-TS-SUPERLITE) | historical | Smaller GOAT-TS branch. | low | Archive or mark superseded. |
 
-## Historical / Experimental Prototypes
+## Should Be Archived Or De-Emphasized
 
-| Repo | Purpose | Status | First-contact priority |
-| --- | --- | --- | --- |
-| [GOAT-TS](https://github.com/BoggersTheFish/GOAT-TS) | Historical TS prototype line. | historical | low |
-| [GOAT-TS-DEVELOPMENT](https://github.com/BoggersTheFish/GOAT-TS-DEVELOPMENT) | Development branch for the historical GOAT-TS line. | historical | low |
-| [GOAT-TS-LITE](https://github.com/BoggersTheFish/GOAT-TS-LITE) | Lightweight historical GOAT-TS branch. | historical | low |
-| [GOAT-TS-SUPERLITE](https://github.com/BoggersTheFish/GOAT-TS-SUPERLITE) | Smaller historical GOAT-TS branch. | historical | low |
-| [GOAT-PUBLIC_TEST](https://github.com/BoggersTheFish/GOAT-PUBLIC_TEST) | Public test branch from the GOAT era. | historical | low |
-| [GOAT-OS](https://github.com/BoggersTheFish/GOAT-OS) | Historical OS/kernel experiment. | historical | low |
-| [BoggersTheMind](https://github.com/BoggersTheFish/BoggersTheMind) | Earlier mind/runtime prototype. | historical | low |
-| [BoggersTheSystem](https://github.com/BoggersTheFish/BoggersTheSystem) | Earlier system/runtime prototype. | historical | low |
-| [BoggersThePulse](https://github.com/BoggersTheFish/BoggersThePulse) | Earlier pulse/daemon/runtime prototype. | historical | low |
-| [BoggersBrain](https://github.com/BoggersTheFish/BoggersBrain) | Earlier personal graph/runtime prototype. | historical | low |
-| [boggers-the-dream](https://github.com/BoggersTheFish/boggers-the-dream) | Offline graph consolidation experiment. | experimental | low |
-| [3b_solution](https://github.com/BoggersTheFish/3b_solution) | Historical physics/tension simulator branch. | historical | low |
-| [BoggersTheEngine](https://github.com/BoggersTheFish/BoggersTheEngine) | Side project game-engine experiment. | historical | low |
-| [BAGI](https://github.com/BoggersTheFish/BAGI) | Historical prototype; not part of the current first-contact TS stack. | historical | low |
-| [BLM](https://github.com/BoggersTheFish/BLM) | Historical prototype with unclear public naming. | historical | low |
-| [schizo_bet](https://github.com/BoggersTheFish/schizo_bet) | Historical prototype with unclear public naming. | historical | low |
-| [hehe](https://github.com/BoggersTheFish/hehe) | Historical Rust prototype with unclear public naming. | historical | low |
+| Repo | Status | Role | Priority | Recommended action |
+| --- | --- | --- | --- | --- |
+| [GOAT-PUBLIC_TEST](https://github.com/BoggersTheFish/GOAT-PUBLIC_TEST) | archive-candidate | Public scratch/test branch from older work. | low | Archive after routing note. |
+| [BoggersTheAI-Dev](https://github.com/BoggersTheFish/BoggersTheAI-Dev) | archive-candidate | Old development branch for BoggersTheAI. | low | Archive or mark superseded. |
+| [hehe](https://github.com/BoggersTheFish/hehe) | archive-candidate | Historical Rust prototype with unclear public naming. | low | Archive or rename if technically useful. |
+| [GOAT-OS](https://github.com/BoggersTheFish/GOAT-OS) | archive-candidate | Historical OS/kernel experiment. | low | Archive or mark historical. |
+| [BLM](https://github.com/BoggersTheFish/BLM) | archive-candidate | Historical prototype with unclear public naming. | low | Archive, rename, or make private if appropriate. |
+| [BAGI](https://github.com/BoggersTheFish/BAGI) | archive-candidate | Historical prototype with risky naming. | low | Archive or mark historical; avoid first-contact routing. |
+| [schizo_bet](https://github.com/BoggersTheFish/schizo_bet) | archive-candidate | Historical prototype with risky naming. | low | Archive, rename, or make private if appropriate. |
 
-## Naming Caveat
-
-Some older repos have chaotic names because they were exploratory prototypes. They are not being erased. The current clean research route is:
+## Canonical Route
 
 ```text
-TS-Start-Here -> TS-Reasoner-v0 -> TS-Codex-OS -> TS-Core / TensionLM / CIG
+BoggersTheFish profile README
+  -> TS-Start-Here
+  -> TS-Reasoner-v0
+  -> TS-Codex-OS
+  -> TS-Core
+  -> bozo / TensionLM
+  -> BoggersTheCIG / CIG engine
 ```
