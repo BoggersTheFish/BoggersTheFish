@@ -136,7 +136,7 @@ No code files were changed in this pass.
 
 - `BoggersTheFish` branch `codex/public-routing-control-layer` pushed successfully.
 - `TS-Start-Here` branch `codex/routing-control-layer` pushed successfully.
-- `BoggersTheCIG` commit `51049453` exists locally on branch `codex/cig-public-framing-cleanup`, but push was interrupted because `git push` stayed in pack/remote-transfer with no remote output for several minutes. The local CIG cleanup is committed and ready to retry.
+- `BoggersTheCIG` commit `51049453` exists locally on branch `codex/cig-public-framing-cleanup`, but push did not complete. The first push was interrupted after staying in pack/remote-transfer with no remote output for several minutes. A second bounded retry using `timeout 180s git push -u origin codex/cig-public-framing-cleanup` also timed out with no output. The local CIG cleanup is committed and ready to retry from a better network/git-transfer state.
 - `BoggersTheCIG` still has a pre-existing untracked `LICENSE` file that was not staged or committed by this pass.
 
 ## Manual GitHub UI Actions Still Required
