@@ -4,6 +4,137 @@ Date: 2026-05-22
 
 Scope: publish the BoggersTheCIG public documentation cleanup, document the test environment issue, standardize first-contact README headers for TS-Core, bozo/TensionLM, and cig-ts-engine, and record remaining GitHub UI work.
 
+## 2026-05-22 Follow-Up: CIG Test Isolation And Historical Routing
+
+Scope: make BoggersTheCIG default unit tests run in a venv without mutating tracked repo state, then add historical routing notes to the worst first-contact repos where local README files could be safely edited.
+
+### Repos Inspected
+
+| Repo | Result |
+| --- | --- |
+| `BoggersTheCIG` | Found; changed, tested, committed, and pushed. |
+| `woke-baby-llm` | Found; historical routing note added and pushed. |
+| `schizo_bet` | Found; historical routing note added and pushed. |
+| `BAGI` | Found; historical routing note added and pushed. |
+| `BLM` | Found; historical routing note added and pushed. |
+| `GOAT-OS` | Found; historical routing note added and pushed. |
+| `GOAT-PUBLIC_TEST` | Found; historical routing note added and pushed. |
+| `GOAT-TS-LITE` | Found; `README.md` was missing, so a small routing README was added and pushed. |
+| `GOAT-TS-DEVELOPMENT` | Found; not changed because `README.md` contains invalid UTF-8 bytes. |
+| `GOAT-TS-SUPERLITE` | Found; not changed because `README.md` contains invalid UTF-8 bytes. |
+| `BoggersTheAI-Dev` | Found; historical routing note added and pushed. |
+| `TS-Codex-OS` | Still missing locally. |
+| Standalone `TensionLM` | Still missing locally; current local TensionLM work is in `bozo`. |
+
+### Repos Changed
+
+#### BoggersTheCIG
+
+Commit pushed to `main`:
+
+- `f992aaee Isolate CIG tests from tracked state`
+
+Files changed:
+
+- `docs/CLEANUP_REPORT.md`
+- `docs/TESTING.md`
+- `pytest.ini`
+- `src/concept_graph.py`
+- `src/config.py`
+- `src/provenance_store.py`
+- `src/sqlite_store.py`
+- `tests/conftest.py`
+- `tests/test_self_improver.py`
+- `tests/test_viz.py`
+
+What changed:
+
+- Test runtime paths now route to a temporary directory before `src.config` is imported.
+- SQLite and provenance defaults now derive from `src.config.MEMORY_DIR`.
+- Persistent store singletons are reset between tests.
+- Self-improver tests are marked `integration`.
+- Visualization tests are marked `slow`.
+- Default test workflow is documented in `docs/TESTING.md`.
+- `semantic_search` now has a lexical fallback when optional vector dependencies such as `numpy` are absent.
+
+Test command run:
+
+```bash
+git status --short
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements-dev.txt
+python -m pytest -m "not slow and not external and not integration"
+git status --short
+```
+
+Test result:
+
+- `43 passed`
+- `9 deselected`
+- default test command exited successfully.
+- `git status --short` after tests showed no tracked `memory/`, `graphs/`, `obsidian/`, `data/`, `eval/`, or `viz/` mutations.
+
+Remaining test caveat:
+
+- The full suite is not claimed green.
+- Slow/integration tests remain separated because they may exercise plotting, broad self-improver workflows, vault behavior, or optional local services.
+
+Push result:
+
+- `git push` succeeded: `f7930dc7..f992aaee main -> main`.
+
+#### Historical Routing Notes
+
+Each changed historical repo received this note at the top of `README.md`:
+
+```md
+> **Historical prototype:** this repo is kept public for development history, but it is not the current first-contact path for the TS research stack. Start with `TS-Start-Here`, `TS-Reasoner-v0`, `TS-Codex-OS`, `TS-Core`, `bozo` / TensionLM, and `BoggersTheCIG`.
+```
+
+Commits pushed:
+
+- `woke-baby-llm`: `2d47293 Add historical routing note`
+- `schizo_bet`: `ec58b69 Add historical routing note`
+- `BAGI`: `a93329d Add historical routing note`
+- `BLM`: `709fbad Add historical routing note`
+- `GOAT-OS`: `b8f7f9e Add historical routing note`
+- `GOAT-PUBLIC_TEST`: `7d0cd52 Add historical routing note`
+- `GOAT-TS-LITE`: `944bea5 Add historical routing note`
+- `BoggersTheAI-Dev`: `dab4c3f Add historical routing note`
+
+Skipped historical README edits:
+
+- `GOAT-TS-DEVELOPMENT`: README contains invalid UTF-8 bytes, so it was not rewritten in this pass.
+- `GOAT-TS-SUPERLITE`: README contains invalid UTF-8 bytes, so it was not rewritten in this pass.
+
+No repositories were deleted, archived, force-pushed, or history-rewritten.
+
+### Manual GitHub UI Actions Still Required
+
+1. Pin repos in this order:
+   1. `TS-Start-Here`
+   2. `TS-Reasoner-v0`
+   3. `TS-Codex-OS`
+   4. `TS-Core`
+   5. `bozo`
+   6. `BoggersTheCIG`
+
+2. Add or verify descriptions and topics for flagship repos using the metadata docs.
+
+3. Consider renaming `bozo` to `TensionLM` later, or create a clean `TensionLM` mirror.
+
+4. If routing notes are still desired for `GOAT-TS-DEVELOPMENT` and `GOAT-TS-SUPERLITE`, first do a dedicated README encoding cleanup so the files can be safely patched and reviewed.
+
+### Next Recommended Pass
+
+1. Clone or locate `TS-Codex-OS`, then standardize its README header and metadata.
+2. Decide whether `BoggersTheCIG` or `cig-ts-engine` is the canonical public CIG route.
+3. Run and triage the CIG slow/integration suite separately.
+4. Clean README encoding in `GOAT-TS-DEVELOPMENT` and `GOAT-TS-SUPERLITE` before adding notes there.
+5. Align the website project ordering with the GitHub flagship route.
+
 ## Repos Inspected
 
 | Repo | Local path | Result |
