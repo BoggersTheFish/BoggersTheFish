@@ -135,6 +135,148 @@ No repositories were deleted, archived, force-pushed, or history-rewritten.
 4. Clean README encoding in `GOAT-TS-DEVELOPMENT` and `GOAT-TS-SUPERLITE` before adding notes there.
 5. Align the website project ordering with the GitHub flagship route.
 
+## 2026-05-22 Follow-Up: GOAT Encoding And TS-Codex-OS
+
+Scope: safely repair the two skipped GOAT README encoding issues, add their historical routing notes, bring `TS-Codex-OS` into the local workspace, standardize its public README header, add metadata guidance, and test the lightweight TS-Codex-OS suite.
+
+### GOAT README Encoding Results
+
+Repos inspected:
+
+- `GOAT-TS-DEVELOPMENT`
+- `GOAT-TS-SUPERLITE`
+
+Commands used:
+
+```bash
+git status
+file README.md
+python3 - <<'PY'
+from pathlib import Path
+p = Path("README.md")
+data = p.read_bytes()
+print("bytes:", len(data))
+for enc in ["utf-8", "utf-8-sig", "latin-1", "cp1252"]:
+    try:
+        text = data.decode(enc)
+        print("decodes_as:", enc)
+        print(text[:500])
+        break
+    except UnicodeDecodeError as e:
+        print("fails:", enc, e)
+PY
+```
+
+Findings:
+
+- Both READMEs failed UTF-8 decoding at byte `0x92`.
+- Both decoded safely as CP1252, which preserved smart apostrophes better than Latin-1.
+- Both files also contained old control characters that made `file README.md` report `data`; those were converted to readable UTF-8 text equivalents.
+- No repo history was rewritten and no content was intentionally deleted.
+
+Changes pushed:
+
+- `GOAT-TS-DEVELOPMENT`: `60654f3 Add historical routing note`
+- `GOAT-TS-SUPERLITE`: `b3ab0e2 Add historical routing note`
+
+Both repos now have the historical routing note:
+
+```md
+> **Historical prototype:** this repo is kept public for development history, but it is not the current first-contact path for the TS research stack. Start with `TS-Start-Here`, `TS-Reasoner-v0`, `TS-Codex-OS`, `TS-Core`, `bozo` / TensionLM, and `BoggersTheCIG`.
+```
+
+### TS-Codex-OS Local Clone And Cleanup
+
+Initial state:
+
+- `/home/boggersthefish/workspace/TS-Codex-OS` was missing locally.
+
+Command:
+
+```bash
+git clone https://github.com/BoggersTheFish/TS-Codex-OS.git
+```
+
+Result:
+
+- Clone succeeded.
+- Branch: `main`.
+
+Inspection commands:
+
+```bash
+git status
+head -80 README.md
+find . -maxdepth 2 -type f | sort | head -100
+find . -maxdepth 3 -type f \( -iname 'pytest.ini' -o -iname 'pyproject.toml' -o -iname 'requirements*.txt' -o -iname 'setup.py' -o -iname 'Makefile' \) | sort
+```
+
+README result:
+
+- Existing README was already sober and bounded.
+- It did not have the standardized first-contact header fields, so a small header was added at the top without removing useful existing content.
+
+Metadata result:
+
+- Added `docs/GITHUB_METADATA.md` with:
+  - description: `Local-first project graph, tension ledger, planner, and release receipt substrate for Codex-driven development.`
+  - topics: `ai`, `developer-tools`, `project-management`, `codex`, `reasoning`, `verification`, `receipts`, `local-first`, `python`, `constraint-graph`.
+
+Commit pushed:
+
+- `TS-Codex-OS`: `4d1e615 Standardize public README header`
+
+Files changed:
+
+- `README.md`
+- `docs/GITHUB_METADATA.md`
+
+Test command:
+
+```bash
+python3 -m unittest discover
+```
+
+Test result:
+
+- `Ran 8 tests`
+- `OK`
+- The test run wrote only temporary artifacts under `/tmp`; no tracked repo files changed after the test.
+
+### Push Results
+
+- `GOAT-TS-DEVELOPMENT`: pushed `87e9abf..60654f3 main -> main`.
+- `GOAT-TS-SUPERLITE`: pushed `87e9abf..b3ab0e2 main -> main`.
+- `TS-Codex-OS`: pushed `381224d..4d1e615 main -> main`.
+
+### Remaining Manual GitHub UI Actions
+
+1. Pin repos in this order:
+   1. `TS-Start-Here`
+   2. `TS-Reasoner-v0`
+   3. `TS-Codex-OS`
+   4. `TS-Core`
+   5. `bozo`
+   6. `BoggersTheCIG`
+
+2. Add or verify repo descriptions/topics:
+   - `TS-Start-Here`
+   - `TS-Reasoner-v0`
+   - `TS-Codex-OS`
+   - `TS-Core`
+   - `bozo`
+   - `BoggersTheCIG`
+   - `cig-ts-engine`
+
+3. Decide later whether `bozo` should be renamed to `TensionLM` or mirrored into a clean `TensionLM` repo.
+
+### Next Recommended Pass
+
+1. Verify public GitHub pins and topics after the manual UI update.
+2. Align the website projects page ordering with the pinned flagship route.
+3. Decide the canonical CIG route: `BoggersTheCIG` versus `cig-ts-engine`.
+4. Run a separate CIG slow/integration test triage pass.
+
 ## Repos Inspected
 
 | Repo | Local path | Result |
