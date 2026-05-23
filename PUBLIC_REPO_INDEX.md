@@ -10,7 +10,7 @@ This index controls the first-contact route for the public GitHub surface. It do
 | [TS-Reasoner-v0](https://github.com/BoggersTheFish/TS-Reasoner-v0) | flagship | Inspectable reasoning traces, verifier-backed repair loop, release receipts, and external benchmark harness. | high | Pin second; keep receipts and limitations prominent. |
 | [TS-Codex-OS](https://github.com/BoggersTheFish/TS-Codex-OS) | flagship | Project graph, tension ledger, planner, verifier, and release receipt substrate for Codex-driven development. | high | Pin third; describe as local-first project control. |
 | [TS-Core](https://github.com/BoggersTheFish/TS-Core) | flagship | Graph/tension runtime kernel for propagation, relaxation, stability, and constraint pressure experiments. | high | Pin fourth; keep kernel framing sober. |
-| [bozo](https://github.com/BoggersTheFish/bozo) | flagship | TensionLM experiments: sigmoid pairwise tension attention instead of softmax attention. | high | Pin fifth; consider rename or mirror as `TensionLM`. |
+| [TensionLM](https://github.com/BoggersTheFish/TensionLM) | flagship | TensionLM experiments: sigmoid pairwise tension attention instead of softmax attention. | high | Pin third after TS-Reasoner; public HF runner should be visible. |
 | [BoggersTheCIG](https://github.com/BoggersTheFish/BoggersTheCIG) | flagship | Provenance-aware concept/evidence graph for claims, confidence, contradictions, and Obsidian-readable memory. | high | Pin sixth after README cleanup; foreground limitations. |
 
 ## Active Core Infrastructure
@@ -75,8 +75,6 @@ This index controls the first-contact route for the public GitHub surface. It do
 BoggersTheFish profile README
   -> TS-Start-Here
   -> TS-Reasoner-v0
-  -> TS-Codex-OS
-  -> TS-Core
-  -> bozo / TensionLM
-  -> BoggersTheCIG / CIG engine
+  -> TensionLM
+  -> TS-Codex-OS / TS-Core / BoggersTheCIG
 ```

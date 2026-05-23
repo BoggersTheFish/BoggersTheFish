@@ -11,10 +11,10 @@ That repo explains what exists, what is toy-scope, what is runnable, what has re
 ## Current Flagship Route
 
 1. [TS-Start-Here](https://github.com/BoggersTheFish/TS-Start-Here) — ecosystem map and repo taxonomy.
-2. [TS-Reasoner-v0](https://github.com/BoggersTheFish/TS-Reasoner-v0) — inspectable reasoning traces and external benchmark harness.
-3. [TS-Codex-OS](https://github.com/BoggersTheFish/TS-Codex-OS) — project graph, tension ledger, planner, release receipts.
-4. [TS-Core](https://github.com/BoggersTheFish/TS-Core) — graph/tension runtime kernel.
-5. [bozo / TensionLM](https://github.com/BoggersTheFish/bozo) — sigmoid pairwise tension attention experiments.
+2. [TS-Reasoner-v0](https://github.com/BoggersTheFish/TS-Reasoner-v0) — inspectable reasoning traces, v0.9 proof-chain receipt, and external benchmark harness.
+3. [TensionLM](https://github.com/BoggersTheFish/TensionLM) — sigmoid pairwise tension attention experiments with a public HF runner.
+4. [TS-Codex-OS](https://github.com/BoggersTheFish/TS-Codex-OS) — project graph, tension ledger, planner, release receipts.
+5. [TS-Core](https://github.com/BoggersTheFish/TS-Core) — graph/tension runtime kernel.
 6. [BoggersTheCIG](https://github.com/BoggersTheFish/BoggersTheCIG) — provenance-aware concept/evidence graph.
 
 ## What TS Is
@@ -39,24 +39,24 @@ The practical focus is not hidden reasoning claims. It is inspectable state:
 ## Current Workstreams
 
 - **TS-Core:** graph/tension runtime experiments for propagation, relaxation, stability, and constraint pressure.
-- **TensionLM / bozo:** sigmoid pairwise tension attention experiments, treated as narrow model-mechanism research.
+- **TensionLM:** sigmoid pairwise tension attention experiments, treated as narrow model-mechanism research.
 - **CIG:** provenance-aware concept/evidence graph work for confidence, contradiction tracking, and inspectable knowledge state.
 - **Proof Ranker / TS-Reasoner:** verifier-backed proof scoring, repair traces, small benchmark harnesses, and release receipts.
 - **TS-Codex-OS:** project-control substrate for Codex work: graph, ledger, planner, verifier, and receipts.
 
 ## Best Runnable Artifacts
 
-- [TS-Reasoner-v0](https://github.com/BoggersTheFish/TS-Reasoner-v0): standard-library Python toy reasoner with tests, traces, release receipts, and a v0.8 externalized small benchmark harness.
+- [TS-Reasoner-v0](https://github.com/BoggersTheFish/TS-Reasoner-v0): standard-library Python toy reasoner with tests, traces, release receipts, and a v0.9 proof-chain closure receipt.
 - [TS-Codex-OS](https://github.com/BoggersTheFish/TS-Codex-OS): local project graph and release-control substrate.
 - [TS-Core](https://github.com/BoggersTheFish/TS-Core): graph runtime kernel for TS-style dynamics.
-- [bozo / TensionLM](https://github.com/BoggersTheFish/bozo): language-model mechanism experiments around pairwise tension attention.
+- [TensionLM](https://github.com/BoggersTheFish/TensionLM): language-model mechanism experiments around pairwise tension attention.
 - [BoggersTheCIG](https://github.com/BoggersTheFish/BoggersTheCIG): local-first CIG infrastructure for claims, provenance, contradictions, and Obsidian-readable memory.
 
 ## Current Honest Status
 
 The current artifacts are mostly toy-scope or narrow-scope, but they are real, inspectable, runnable, and increasingly receipt-backed.
 
-The strongest current receipt is TS-Reasoner v0.8: an externalized small benchmark harness that shows the bounded control loop can settle tasks, while also exposing a proof-chain failure mode. Low tension is not yet the same as proof completion. That is the next technical target.
+The strongest current receipt is TS-Reasoner v0.9: a narrow proof-chain closure on the v0.8 externalized small benchmark harness. It fixes the exposed small proof-chain gap without claiming broad reasoning ability.
 
 ## Links
 

@@ -16,7 +16,7 @@ Use this flagship ordering:
 2. TS-Reasoner-v0 / Proof Ranker
 3. TS-Codex-OS
 4. TS-Core
-5. TensionLM / bozo
+5. TensionLM
 6. CIG / BoggersTheCIG / cig-ts-engine
 
 ## CIG Page
@@ -33,7 +33,7 @@ Avoid presenting CIG as the whole TS system or as a finished autonomous reasoner
 
 - Foreground release receipts.
 - Foreground toy-scope and narrow benchmark limits.
-- Explain the v0.8 proof-chain failure and v0.9 transitive-proof target.
+- Explain the v0.8 proof-chain failure and v0.9 narrow proof-chain closure.
 
 ## Support / BGC
 

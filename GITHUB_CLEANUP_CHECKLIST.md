@@ -28,7 +28,7 @@ BoggersTheFish/BoggersTheFish
 2. `TS-Reasoner-v0`
 3. `TS-Codex-OS`
 4. `TS-Core`
-5. `bozo` or a renamed `TensionLM` repo
+5. `TensionLM`
 6. `BoggersTheCIG` or the strongest current CIG repo
 
 ## Repo Descriptions
@@ -59,7 +59,7 @@ Local-first project graph, tension ledger, planner, and release receipt substrat
 Lightweight graph dynamics kernel for TS-style propagation, relaxation, stability, and tension experiments.
 ```
 
-### bozo
+### TensionLM
 
 ```text
 TensionLM experiments: sigmoid pairwise tension attention as an inspectable alternative to softmax attention.
@@ -83,7 +83,7 @@ Use a narrower topic set for individual repos when possible. For example:
 
 - TS-Reasoner-v0: `ai`, `reasoning`, `verification`, `constraint-graph`, `python`, `research`
 - TS-Core: `graph`, `constraint-graph`, `simulation`, `python`, `research`
-- bozo: `language-models`, `attention`, `interpretability`, `python`, `research`
+- TensionLM: `language-models`, `attention`, `interpretability`, `pytorch`, `ai`, `research`
 - CIG repos: `knowledge-graph`, `provenance`, `contradiction`, `verification`, `python`
 
 ## Historical Repo Routing Note

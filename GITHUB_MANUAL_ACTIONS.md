@@ -8,9 +8,9 @@ Change pinned repositories to this order:
 
 1. `TS-Start-Here`
 2. `TS-Reasoner-v0`
-3. `TS-Codex-OS`
-4. `TS-Core`
-5. `bozo`
+3. `TensionLM`
+4. `TS-Codex-OS`
+5. `TS-Core`
 6. `BoggersTheCIG`
 
 Remove older first-contact pins such as:
@@ -55,7 +55,7 @@ Local-first project graph, tension ledger, planner, and release receipt substrat
 Lightweight graph dynamics kernel for TS-style propagation, relaxation, stability, and tension experiments.
 ```
 
-### bozo
+### TensionLM
 
 ```text
 TensionLM experiments: sigmoid pairwise tension attention as an inspectable alternative to softmax attention.
@@ -69,12 +69,11 @@ Local-first provenance-aware concept graph for confidence-weighted claims, contr
 
 ## TensionLM Naming
 
-Consider either:
+`bozo` is now treated as renamed to `TensionLM`. Public links should use:
 
-- renaming `bozo` to `TensionLM`, or
-- creating a clean `TensionLM` mirror that points back to `bozo` as the original implementation history.
-
-Do this later, after the profile route and README routing notes are stable.
+```text
+https://github.com/BoggersTheFish/TensionLM
+```
 
 ## Historical Repos
 

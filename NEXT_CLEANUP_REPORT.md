@@ -344,7 +344,7 @@ Change:
 
 ### bozo / TensionLM
 
-Published PR: `https://github.com/BoggersTheFish/bozo/pull/2`
+Published PR: `https://github.com/BoggersTheFish/TensionLM/pull/2`
 
 Main branch after merge: `b02d0de Standardize TensionLM public README header`
 
