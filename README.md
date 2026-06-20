@@ -1,65 +1,49 @@
-# BoggersTheFish
+# Ben Michalek / BoggersTheFish
 
-Independent AI research stack for inspectable reasoning systems: constraint graphs, tension telemetry, verifier-backed traces, and provenance-aware knowledge graphs.
+Verifier-first systems, deterministic language, tension-driven model experiments, and verified computing.
 
-## Start Here
+The canonical public record is [boggersthefish.com](https://www.boggersthefish.com/). It carries the current project map, evidence boundaries, negative results, and the permanent lineage of earlier work.
 
-The clean public route starts at [TS-Start-Here](https://github.com/BoggersTheFish/TS-Start-Here).
+## Start here
 
-That repo explains what exists, what is toy-scope, what is runnable, what has receipts, and what should be read as historical prototype work.
+- [Home](https://www.boggersthefish.com/)
+- [Start here](https://www.boggersthefish.com/start-here)
+- [Current projects](https://www.boggersthefish.com/projects)
+- [Project lineage](https://www.boggersthefish.com/lineage)
+- [Proof bank](https://www.boggersthefish.com/proof-bank)
 
-## Current Flagship Route
+## Maintained repositories
 
-1. [TS-Start-Here](https://github.com/BoggersTheFish/TS-Start-Here) — ecosystem map and repo taxonomy.
-2. [TS-Reasoner-v0](https://github.com/BoggersTheFish/TS-Reasoner-v0) — inspectable reasoning traces, v0.9 proof-chain receipt, and external benchmark harness.
-3. [TensionLM](https://github.com/BoggersTheFish/TensionLM) — sigmoid pairwise tension attention experiments with a public HF runner.
-4. [TS-Codex-OS](https://github.com/BoggersTheFish/TS-Codex-OS) — project graph, tension ledger, planner, release receipts.
-5. [TS-Core](https://github.com/BoggersTheFish/TS-Core) — graph/tension runtime kernel.
-6. [BoggersTheCIG](https://github.com/BoggersTheFish/BoggersTheCIG) — provenance-aware concept/evidence graph.
+### Public entrypoints
 
-## What TS Is
+- [BoggersTheFish](https://github.com/BoggersTheFish/BoggersTheFish) — this profile and the shortest route to the public archive.
+- [boggersthefish-site](https://github.com/BoggersTheFish/boggersthefish-site) — canonical public record and permanent project lineage.
 
-TS / Thinking System is an engineering framework for modelling information transfer through graph structure, constraint pressure, contradiction handling, provenance, and relaxation.
+### Reasoning and language
 
-The practical focus is not hidden reasoning claims. It is inspectable state:
+- [TS-Reasoner-v0](https://github.com/BoggersTheFish/TS-Reasoner-v0) — typed verifier authority, inspectable traces, repair, rejection, replay, and receipts.
+- [ts-chat-language](https://github.com/BoggersTheFish/ts-chat-language) — deterministic text-to-MeaningGraph compilation, memory, planning, and rendering.
 
-- graph nodes and edges for claims, evidence, operations, and dependencies,
-- tension signals for unresolved constraint pressure,
-- provenance and confidence records for claim/evidence state,
-- verifier-backed traces for proof scoring, repair, and release receipts.
+### Model science and adaptive inference
 
-## What TS Is Not
+- [Ten-SON-LM](https://github.com/BoggersTheFish/Ten-SON-LM) — recurrent semantic workspace and causal tension experiments.
+- [TensionLM](https://github.com/BoggersTheFish/TensionLM) — pairwise-tension attention experiments, matched comparisons, and negative results.
+- [TensionForge](https://github.com/BoggersTheFish/TensionForge) — verifier-first OpenCL training on legacy AMD hardware.
+- [tsq](https://github.com/BoggersTheFish/tsq) — verifier-gated adaptive-precision experiments.
+- [TS-Benchmarks](https://github.com/BoggersTheFish/TS-Benchmarks) — audit-first falsification and replay harnesses.
 
-- Not a finished general intelligence system.
-- Not a production theorem prover.
-- Not a claim that toy benchmark scores prove general reasoning.
-- Not a theory-of-everything claim.
-- Not an autonomous self-improving system unless a repo explicitly marks that path as experimental and human-reviewed.
+### Verified computing and shared infrastructure
 
-## Current Workstreams
+- [bogbin](https://github.com/BoggersTheFish/bogbin) — deterministic storage, processes, workspaces, journals, and rollback.
+- [TS-Core](https://github.com/BoggersTheFish/TS-Core) — compact graph/tension substrate for propagation, relaxation, contradiction, and revision.
+- [cig-ts-engine](https://github.com/BoggersTheFish/cig-ts-engine) — deterministic claim, evidence, provenance, and tension graph engine.
 
-- **TS-Core:** graph/tension runtime experiments for propagation, relaxation, stability, and constraint pressure.
-- **TensionLM:** sigmoid pairwise tension attention experiments, treated as narrow model-mechanism research.
-- **CIG:** provenance-aware concept/evidence graph work for confidence, contradiction tracking, and inspectable knowledge state.
-- **Proof Ranker / TS-Reasoner:** verifier-backed proof scoring, repair traces, small benchmark harnesses, and release receipts.
-- **TS-Codex-OS:** project-control substrate for Codex work: graph, ledger, planner, verifier, and receipts.
+## Evidence boundary
 
-## Best Runnable Artifacts
+- This is not a finished AGI.
+- This is not a general theorem prover.
+- This is not a production operating system.
+- Model confidence is not proof.
+- Negative and neutral results remain visible.
 
-- [TS-Reasoner-v0](https://github.com/BoggersTheFish/TS-Reasoner-v0): standard-library Python toy reasoner with tests, traces, release receipts, and a v0.9 proof-chain closure receipt.
-- [TS-Codex-OS](https://github.com/BoggersTheFish/TS-Codex-OS): local project graph and release-control substrate.
-- [TS-Core](https://github.com/BoggersTheFish/TS-Core): graph runtime kernel for TS-style dynamics.
-- [TensionLM](https://github.com/BoggersTheFish/TensionLM): language-model mechanism experiments around pairwise tension attention.
-- [BoggersTheCIG](https://github.com/BoggersTheFish/BoggersTheCIG): local-first CIG infrastructure for claims, provenance, contradictions, and Obsidian-readable memory.
-
-## Current Honest Status
-
-The current artifacts are mostly toy-scope or narrow-scope, but they are real, inspectable, runnable, and increasingly receipt-backed.
-
-The strongest current receipt is TS-Reasoner v0.9: a narrow proof-chain closure on the v0.8 externalized small benchmark harness. It fixes the exposed small proof-chain gap without claiming broad reasoning ability.
-
-## Links
-
-- Website: https://www.boggersthefish.com/
-- GitHub: https://github.com/BoggersTheFish
-- Hugging Face: https://huggingface.co/BoggersTheFish
+Claims are bounded by the verifier, benchmark, receipt, or experiment that supports them. Current work and historical context belong on the website rather than in an expanding set of overlapping repositories.
